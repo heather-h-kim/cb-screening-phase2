@@ -7,3 +7,6 @@ const f = (x = 0) => {
   setImmediate(process.exit, 0)
   queueMicrotask(() => f(x + 1))
 }
+
+console.log(f());
+

@@ -15,3 +15,17 @@ const f = (x, y, z) => {
     p ? y() : z()
   })
 }
+
+
+
+const test1 = () => {
+  console.log('hello');
+  
+}
+
+const test2 = () => {
+  console.log('good bye');
+  
+}
+
+f(x, test1, test2);
