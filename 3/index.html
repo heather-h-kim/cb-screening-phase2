@@ -8,9 +8,26 @@
   <title>Document</title>
 </head>
 <body>
-  <p id="1">Click</p>
-  <!-- <script type="text/javascript"> f(document.getElementById('1'), test1, test2) </script> -->
-  <script type="text/javascript"> document.getElementById('1') </script>
+  <p id="1" >Click</p>
+  <script type="text/javascript" > 
+  f(document.getElementById("1"), test1, test2);
+
+  //Simulate click function
+  function clickP(){
+    document.getElementById("1").click();
+  }
+
+  //Simulate a click every four seconds without actually clicking on the p element. Then, p is set to false.
+  //Set the return value of setInterval to use the value for clearInterval.
+  let intervalId = setInterval(clickP, 4000);
+ 
+  //Cancel the action established by setInterval.
+  //Click simulation stops.
+  clearInterval(intervalId);
+  
+  
+  </script> 
+  
 
 </body>
 </html>
